@@ -79,8 +79,8 @@ Using Outside Of The CLI
 ------------------------
 
 This is disallowed by default; if you're absolutely certain you need to do this
-- keeping in mind that typechecker errors are real problems with your code, not
-just lint - you can disable the check:
+(keeping in mind that typechecker errors are real problems with your code, not
+just lint) you can disable the check:
 
 ```PHP
 FredEmmott\HackErrorSuppressor::allowRealRequestsAgainstBrokenCode();
