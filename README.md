@@ -38,6 +38,10 @@ to be running on a temporarily-broken codebase, and your code fixes it.
 How To Use This
 ---------------
 
+```
+$ composer require fredemmott/hack-error-suppressor
+```
+
 You must enable error suppression before any Hack code is loaded.
 
 You can explicitly enable and disable the suppression:
