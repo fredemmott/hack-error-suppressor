@@ -1,4 +1,4 @@
-Hack Error Suppressor [![Build Status](https://travis-ci.org/fredemmott/definition-finder.svg?branch=master)](https://travis-ci.org/fredemmott/definition-finder)
+Hack Error Suppressor [![Build Status](https://travis-ci.org/fredemmott/hack-error-suppressor.svg?branch=master)](https://travis-ci.org/fredemmott/hack-error-suppressor)
 =====================
 
 Unless the `hhvm.hack.lang.look_for_typechecker` ini setting is set to false,
