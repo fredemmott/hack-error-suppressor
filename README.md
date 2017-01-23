@@ -35,12 +35,15 @@ Typechecker errors are real problems with code, and mean that things *are*
 broken; ignoring enforcement is only a good idea if you are expecting your code
 to be running on a temporarily-broken codebase, and your code fixes it.
 
-How To Use This
----------------
+Installation
+------------
 
 ```
 $ composer require fredemmott/hack-error-suppressor
 ```
+
+Usage
+-----
 
 You must enable error suppression before any Hack code is loaded.
 
