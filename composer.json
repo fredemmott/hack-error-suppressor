@@ -1,0 +1,27 @@
+{
+  "name": "fredemmott/hack-error-suppressor",
+  "description": "Suppress HHVM's automatic conversion of typechecker errors to fatals.",
+  "type": "library",
+  "license": "ISC",
+  "authors": [
+    {
+      "name": "Fred Emmott",
+      "email": "fred@fredemmott.co.uk"
+    }
+  ],
+  "autoload": {
+    "classmap": [
+      "src/"
+    ]
+  },
+  "autoload-dev": {
+    "classmap": [
+      "tests/"
+    ]
+  },
+  "require": {},
+  "require-dev": {
+    "phpunit/phpunit": "^5.7",
+    "91carriage/phpunit-hhi": "^5.6"
+  }
+}
