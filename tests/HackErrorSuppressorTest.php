@@ -37,16 +37,20 @@ final class HackErrorSuppressorTest extends BaseTestCase {
   }
 
   public function testCantEnableTwice(): void {
+    /* HH_IGNORE_ERROR[2049] https://github.com/facebook/hhvm/issues/5917 */
     $this->expectException(\HH\InvariantException::class);
 
+    /* HH_IGNORE_ERROR[2049] PHP class */
     $it = new HackErrorSuppressor();
     $it->enable();
     $it->enable();
   }
 
   public function testCantDisableIfNotEnabled(): void {
+    /* HH_IGNORE_ERROR[2049] https://github.com/facebook/hhvm/issues/5917 */
     $this->expectException(\HH\InvariantException::class);
 
+    /* HH_IGNORE_ERROR[2049] PHP class */
     $it = new HackErrorSuppressor();
     $it->disable();
   }
@@ -54,6 +58,7 @@ final class HackErrorSuppressorTest extends BaseTestCase {
   public function testDelegatesOtherErrors(): void {
     $x = Vector {};
     \set_error_handler(() ==> $x[] = func_get_args());
+    /* HH_IGNORE_ERROR[2049] PHP class */
     $it = new HackErrorSuppressor();
     $it->enable();
     trigger_error('Foo');
@@ -65,6 +70,7 @@ final class HackErrorSuppressorTest extends BaseTestCase {
   public function testRestoresErrorHandler(): void {
     $x = Vector {};
     \set_error_handler(() ==> $x[] = func_get_args());
+    /* HH_IGNORE_ERROR[2049] PHP class */
     $it = new HackErrorSuppressor();
     $it->enable();
     $it->disable();
@@ -74,6 +80,7 @@ final class HackErrorSuppressorTest extends BaseTestCase {
   }
 
   <<__Memoize>>
+  /* HH_IGNORE_ERROR[2049] PHP class */
   private function getMockWithBadSAPI(): HackErrorSuppressor {
     // ... I feel dirty
     $class = 'TestMock_'.bin2hex(random_bytes(4));
@@ -93,6 +100,7 @@ final class HackErrorSuppressorTest extends BaseTestCase {
   }
 
   public function testFailsIfNotCLI(): void {
+    /* HH_IGNORE_ERROR[2049] https://github.com/facebook/hhvm/issues/5917 */
     $this->expectException(\HH\InvariantException::class);
     $this->expectExceptionMessage('BOGUS TEST SAPI');
 
@@ -100,6 +108,7 @@ final class HackErrorSuppressorTest extends BaseTestCase {
   }
 
   public function testSucceedsIfNotCLIAndAllowed(): void {
+    /* HH_IGNORE_ERROR[2049] PHP class */
     HackErrorSuppressor::allowRealRequestsAgainstBrokenCode();
     $this->getMockWithBadSAPI()->enable();
   }

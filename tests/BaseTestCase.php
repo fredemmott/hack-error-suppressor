@@ -53,7 +53,9 @@ abstract class BaseTestCase extends \PHPUnit\Framework\TestCase {
       "use %s;\n".
       "use %s;\n\n",
       __DIR__.'/../vendor/autoload.php',
+      /* HH_IGNORE_ERROR[2049] PHP class */
       \FredEmmott\HackErrorSuppressor::class,
+      /* HH_IGNORE_ERROR[2049] PHP class */
       \FredEmmott\ScopedHackErrorSuppressor::class,
     );
   }
