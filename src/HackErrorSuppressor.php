@@ -63,21 +63,27 @@ final class HackErrorSuppressor {
   }
 
   private function handleError(
-    $errno,
-    $errstr,
-    $errfile = null,
-    $errline = null,
-    $errcontext = null
+    ...$args
   ) {
-    if ((!is_array($errcontext)) || count($errcontext) === 0) {
-      return $this->callOldHandler(...func_get_args());
+    // The position of the backtrace varies for these :/
+    $bt_args = array_values(array_filter(
+      $args,
+      function($arg) {
+        return is_array($arg) && array_key_exists('function', $arg[0] ?? []);
+      }
+    ));
+    if (count($bt_args) !== 1) {
+      return $this->callOldHandler(...$args);
     }
 
-    $blame_func = $errcontext[0]['function'] ?? null;
-    if ($blame_func === 'HH\\Client\\typecheck_and_error') {
-      return true;
+    $backtrace = $bt_args[0];
+    foreach ($backtrace as $frame) {
+      $func = $frame['function'] ?? null;
+      if ($func === 'HH\\Client\\typecheck_and_error') {
+        return true;
+      }
     }
 
-    return $this->callOldHandler(...func_get_args());
+    return $this->callOldHandler(...$args);
   }
 }

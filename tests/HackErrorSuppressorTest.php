@@ -26,6 +26,17 @@ final class HackErrorSuppressorTest extends BaseTestCase {
     $this->assertHasGoodOutput($output, $exit_code);
   }
 
+  public function testSuppressesNoHHConfigErrorIfEnabled(): void {
+    unlink($this->getWorkDir().'/.hhconfig');
+    list($output, $exit_code) = $this->runCode(
+      "\$x = new HackErrorSuppressor();\n".
+      "\$x->enable();\n".
+      self::CALL_GOOD_CODE,
+    );
+    $this->assertHasGoodOutput($output, $exit_code);
+  }
+
+
   public function testExceptionRaisedIfEnabledAndDisabled(): void {
     list($output, $exit_code) = $this->runCode(
       "\$x = new HackErrorSuppressor();\n".
