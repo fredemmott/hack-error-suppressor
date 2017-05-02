@@ -65,23 +65,7 @@ final class HackErrorSuppressor {
   private function handleError(
     ...$args
   ) {
-    // The position of the backtrace varies for these :/
-    $bt_args = array_values(array_filter(
-      $args,
-      function($arg) {
-        return (
-          is_array($arg)
-          && array_key_exists(0, $arg)
-          && array_key_exists('file', $arg[0])
-          && array_key_exists('line', $arg[0])
-        );
-      }
-    ));
-    if (count($bt_args) !== 1) {
-      return $this->callOldHandler(...$args);
-    }
-
-    $backtrace = $bt_args[0];
+    $backtrace = debug_backtrace(DEBUG_BACKTRACE_IGNORE_ARGS);
     foreach ($backtrace as $frame) {
       $func = $frame['function'] ?? null;
       if ($func === 'HH\\Client\\typecheck_and_error') {
