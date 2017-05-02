@@ -4,23 +4,22 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "dfe865f6272121103212217bdb27bd35",
     "content-hash": "dae7bab56c138db065314914d26d9fd8",
     "packages": [],
     "packages-dev": [
         {
             "name": "91carriage/phpunit-hhi",
-            "version": "5.6.0",
+            "version": "5.7.0",
             "source": {
                 "type": "git",
                 "url": "https://git.simon.geek.nz/91-carriage/phpunit-hhi.git",
-                "reference": "2e38a07c7dae127c36d4754fd9d2e24f498fab8b"
+                "reference": "7cf2db21dfadaaf8be24773f3d781fa43c8103a5"
             },
             "require": {
                 "hhvm": ">=3.9.0"
             },
             "conflict": {
-                "phpunit/phpunit": "<5.6.1"
+                "phpunit/phpunit": "<5.7.0"
             },
             "require-dev": {
                 "phpunit/phpunit": "*"
@@ -31,7 +30,8 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "5.7.x-dev",
+                    "dev-master": "6.0.x-dev",
+                    "dev-phpunit-5.7": "5.7.x-dev",
                     "dev-phpunit-5.6": "5.6.x-dev",
                     "dev-phpunit-5.5": "5.5.x-dev",
                     "dev-phpunit-5.4": "5.4.x-dev",
@@ -53,8 +53,7 @@
                 "hhvm",
                 "phpunit",
                 "testing"
-            ],
-            "time": "2016-10-18 09:45:27"
+            ]
         },
         {
             "name": "doctrine/instantiator",
@@ -107,8 +106,7 @@
             "keywords": [
                 "constructor",
                 "instantiate"
-            ],
-            "time": "2015-06-14 21:17:01"
+            ]
         },
         {
             "name": "myclabs/deep-copy",
@@ -149,8 +147,7 @@
                 "duplicate",
                 "object",
                 "object graph"
-            ],
-            "time": "2016-10-31 17:19:45"
+            ]
         },
         {
             "name": "phpdocumentor/reflection-common",
@@ -203,8 +200,7 @@
                 "phpdoc",
                 "reflection",
                 "static analysis"
-            ],
-            "time": "2015-12-27 11:43:31"
+            ]
         },
         {
             "name": "phpdocumentor/reflection-docblock",
@@ -248,8 +244,7 @@
                     "email": "me@mikevanriel.com"
                 }
             ],
-            "description": "With this component, a library can provide support for annotations via DocBlocks or otherwise retrieve information that is embedded in a DocBlock.",
-            "time": "2016-09-30 07:12:33"
+            "description": "With this component, a library can provide support for annotations via DocBlocks or otherwise retrieve information that is embedded in a DocBlock."
         },
         {
             "name": "phpdocumentor/type-resolver",
@@ -295,8 +290,7 @@
                     "name": "Mike van Riel",
                     "email": "me@mikevanriel.com"
                 }
-            ],
-            "time": "2016-11-25 06:54:22"
+            ]
         },
         {
             "name": "phpspec/prophecy",
@@ -358,8 +352,7 @@
                 "mock",
                 "spy",
                 "stub"
-            ],
-            "time": "2016-11-21 14:58:47"
+            ]
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -421,8 +414,7 @@
                 "coverage",
                 "testing",
                 "xunit"
-            ],
-            "time": "2017-01-20 15:06:43"
+            ]
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -468,8 +460,7 @@
             "keywords": [
                 "filesystem",
                 "iterator"
-            ],
-            "time": "2016-10-03 07:40:28"
+            ]
         },
         {
             "name": "phpunit/php-text-template",
@@ -509,8 +500,7 @@
             "homepage": "https://github.com/sebastianbergmann/php-text-template/",
             "keywords": [
                 "template"
-            ],
-            "time": "2015-06-21 13:50:34"
+            ]
         },
         {
             "name": "phpunit/php-timer",
@@ -553,8 +543,7 @@
             "homepage": "https://github.com/sebastianbergmann/php-timer/",
             "keywords": [
                 "timer"
-            ],
-            "time": "2016-05-12 18:03:57"
+            ]
         },
         {
             "name": "phpunit/php-token-stream",
@@ -602,8 +591,7 @@
             "homepage": "https://github.com/sebastianbergmann/php-token-stream/",
             "keywords": [
                 "tokenizer"
-            ],
-            "time": "2016-11-15 14:06:22"
+            ]
         },
         {
             "name": "phpunit/phpunit",
@@ -684,8 +672,7 @@
                 "phpunit",
                 "testing",
                 "xunit"
-            ],
-            "time": "2017-01-22 08:39:59"
+            ]
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -743,8 +730,7 @@
             "keywords": [
                 "mock",
                 "xunit"
-            ],
-            "time": "2016-12-08 20:27:08"
+            ]
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",
@@ -788,8 +774,7 @@
                 }
             ],
             "description": "Looks up which function or method a line of code belongs to",
-            "homepage": "https://github.com/sebastianbergmann/code-unit-reverse-lookup/",
-            "time": "2016-02-13 06:45:14"
+            "homepage": "https://github.com/sebastianbergmann/code-unit-reverse-lookup/"
         },
         {
             "name": "sebastian/comparator",
@@ -852,8 +837,7 @@
                 "comparator",
                 "compare",
                 "equality"
-            ],
-            "time": "2016-11-19 09:18:40"
+            ]
         },
         {
             "name": "sebastian/diff",
@@ -904,8 +888,7 @@
             "homepage": "https://github.com/sebastianbergmann/diff",
             "keywords": [
                 "diff"
-            ],
-            "time": "2015-12-08 07:14:41"
+            ]
         },
         {
             "name": "sebastian/environment",
@@ -954,8 +937,7 @@
                 "Xdebug",
                 "environment",
                 "hhvm"
-            ],
-            "time": "2016-11-26 07:53:53"
+            ]
         },
         {
             "name": "sebastian/exporter",
@@ -1021,8 +1003,7 @@
             "keywords": [
                 "export",
                 "exporter"
-            ],
-            "time": "2016-11-19 08:54:04"
+            ]
         },
         {
             "name": "sebastian/global-state",
@@ -1072,8 +1053,7 @@
             "homepage": "http://www.github.com/sebastianbergmann/global-state",
             "keywords": [
                 "global state"
-            ],
-            "time": "2015-10-12 03:26:01"
+            ]
         },
         {
             "name": "sebastian/object-enumerator",
@@ -1118,8 +1098,7 @@
                 }
             ],
             "description": "Traverses array structures and object graphs to enumerate all referenced objects",
-            "homepage": "https://github.com/sebastianbergmann/object-enumerator/",
-            "time": "2016-11-19 07:35:10"
+            "homepage": "https://github.com/sebastianbergmann/object-enumerator/"
         },
         {
             "name": "sebastian/recursion-context",
@@ -1171,8 +1150,7 @@
                 }
             ],
             "description": "Provides functionality to recursively process PHP variables",
-            "homepage": "http://www.github.com/sebastianbergmann/recursion-context",
-            "time": "2016-11-19 07:33:16"
+            "homepage": "http://www.github.com/sebastianbergmann/recursion-context"
         },
         {
             "name": "sebastian/resource-operations",
@@ -1213,8 +1191,7 @@
                 }
             ],
             "description": "Provides a list of PHP built-in functions that operate on resources",
-            "homepage": "https://www.github.com/sebastianbergmann/resource-operations",
-            "time": "2015-07-28 20:34:47"
+            "homepage": "https://www.github.com/sebastianbergmann/resource-operations"
         },
         {
             "name": "sebastian/version",
@@ -1256,8 +1233,7 @@
                 }
             ],
             "description": "Library that helps with managing the version number of Git-hosted PHP projects",
-            "homepage": "https://github.com/sebastianbergmann/version",
-            "time": "2016-10-03 07:35:21"
+            "homepage": "https://github.com/sebastianbergmann/version"
         },
         {
             "name": "symfony/yaml",
@@ -1311,8 +1287,7 @@
                 }
             ],
             "description": "Symfony Yaml Component",
-            "homepage": "https://symfony.com",
-            "time": "2017-01-03 13:51:32"
+            "homepage": "https://symfony.com"
         },
         {
             "name": "webmozart/assert",
@@ -1361,8 +1336,7 @@
                 "assert",
                 "check",
                 "validate"
-            ],
-            "time": "2016-11-23 20:04:58"
+            ]
         }
     ],
     "aliases": [],
