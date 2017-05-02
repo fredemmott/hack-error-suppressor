@@ -69,7 +69,12 @@ final class HackErrorSuppressor {
     $bt_args = array_values(array_filter(
       $args,
       function($arg) {
-        return is_array($arg) && array_key_exists('function', $arg[0] ?? []);
+        return (
+          is_array($arg)
+          && array_key_exists(0, $arg)
+          && array_key_exists('file', $arg[0])
+          && array_key_exists('line', $arg[0])
+        );
       }
     ));
     if (count($bt_args) !== 1) {
