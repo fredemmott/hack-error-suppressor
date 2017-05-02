@@ -34,7 +34,7 @@ final class HackErrorSuppressor {
       'Already enabled'
     );
     $this->oldHandler = \set_error_handler(
-      function(...$args) { $this->handleError(...$args); }
+      function(...$args) { return $this->handleError(...$args); }
     );
     $this->enabled = true;
   }

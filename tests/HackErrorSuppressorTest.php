@@ -36,7 +36,6 @@ final class HackErrorSuppressorTest extends BaseTestCase {
     $this->assertHasGoodOutput($output, $exit_code);
   }
 
-
   public function testExceptionRaisedIfEnabledAndDisabled(): void {
     list($output, $exit_code) = $this->runCode(
       "\$x = new HackErrorSuppressor();\n".
@@ -45,6 +44,20 @@ final class HackErrorSuppressorTest extends BaseTestCase {
       self::CALL_GOOD_CODE,
     );
     $this->assertHasExpectedError($output, $exit_code);
+  }
+
+  public function testFallsThroughToStandardErrorIfNoHandler(): void {
+    file_put_contents(
+      $this->getWorkDir().'/raises_error.php',
+      "<?php trigger_error('My example error', E_USER_ERROR);\n"
+    );
+    list($output, $exit_code) = $this->runCode(
+      "\$x = new HackErrorSuppressor();\n".
+      "\$x->enable();\n".
+      "require_once('raises_error.php');\n"
+    );
+    $this->assertGreaterThan(0, $exit_code);
+    $this->assertContains('Fatal error: My example error', $output);
   }
 
   public function testCantEnableTwice(): void {
