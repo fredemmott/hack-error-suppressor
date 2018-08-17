@@ -1,3 +1,8 @@
+INACTIVE PROJECT
+================
+
+THIS PROJECT IS NO LONGER ACTIVE; it is not needed with HHVM 3.25 and later.
+
 Hack Error Suppressor [![Build Status](https://travis-ci.org/fredemmott/hack-error-suppressor.svg?branch=master)](https://travis-ci.org/fredemmott/hack-error-suppressor)
 =====================
 
